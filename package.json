@@ -1,0 +1,15 @@
+{
+  "name": "slack-status-changes",
+  "version": "0.0.1",
+  "description": "Listen for `user_change` events on the Events API, and then post status changes to the webhook channel",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^5.0.1",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
+}
