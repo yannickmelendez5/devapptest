@@ -22,8 +22,8 @@ var channel_id = process.env.CHANNEL_ID;
 app.get('/events', function(req, res){
 
   if(req.body.challenge) {
-    // Respond to the challenge **Yannick - added ) to argument. Error appeared when starting app in CLI.
-    res.send("challenge"): req.body.challenge);
+    // Respond to the challenge 
+    res.send({"challenge": req.body.challenge});
 
   } else {
     // Store details about the user
