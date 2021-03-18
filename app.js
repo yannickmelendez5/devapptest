@@ -11,18 +11,20 @@ app.use(bodyParser.json())
 var api_token = process.env.API_TOKEN;
 var channel_id = process.env.CHANNEL_ID;
 
-
 //
 //
 // You don't need to make changes to anything above this line
 //
 //
 
+
+
+
 // Handle Events API events
 app.get('/events', function(req, res){
 
   if(req.body.challenge) {
-    // Respond to the challenge 
+    // Respond to the challenge
     res.send({"challenge": req.body.challenge});
 
   } else {
@@ -97,6 +99,7 @@ function postUpdate(attachments) {
 
 // Listen for requests
 var listener = app.listen(12345, function () {
-  console.log('App is listening on port ' + 12345);
+  console.log("App is listening on port " + 12345);
+//   Yannick - Port number added to the above 2 lines. Needs to specify a port for web process. 
+//   Yannick - listener.process.env. also removed. Issues starting the app with this portion specified. Changed to reflect that of index.js reference in slack documentation.
 });
-//****yannick, updated line 102 & 103 based on index.js file used when setting up ngrok test for slack
