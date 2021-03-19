@@ -98,10 +98,9 @@ function postUpdate(attachments) {
 }
 
 // Listen for requests
-// Listen for requests
-var listener = process.env.PORT || 12345;
-app.listen(port, "12345", function () {
+const PORT=12345;
+app.listen(12345, function () {
   console.log("App is listening on port 12345");
 //   Yannick - Port number added to the above lines, declared the listener variable before calling app.listen function. 
-//   Yannick - listener.process.env. also removed. Issues starting the app with this portion specified. Changed to reflect that of index.js reference in slack documentation.
+//   Yannick - Changed to reflect that of index.js reference in slack documentation.
 });
