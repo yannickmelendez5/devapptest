@@ -18,6 +18,20 @@ var channel_id = process.env.CHANNEL_ID;
 //
 
 
+//Adding client ID and client secret per slack ngrok app setup documentation
+//Generally would NOT have the client secret. 
+var clientId = '1854737147415.1889414518769';
+var clientSecret = '6f44d2f1fee28c3626d38cf5a019079d';
+
+// Yannick - Define port 
+const PORT= 12345;
+
+//Yannick - Listen for requests
+app.listen(12345, function () {
+  console.log("App is listening on port 12345");
+//   Yannick - Port number added to the above lines, declared the listener variable before calling app.listen function. 
+//   Yannick - Changed to reflect that of index.js reference in slack documentation.
+});
 
 
 // Handle Events API events
@@ -97,10 +111,4 @@ function postUpdate(attachments) {
   );
 }
 
-// Listen for requests
-const PORT=12345;
-app.listen(12345, function () {
-  console.log("App is listening on port 12345");
-//   Yannick - Port number added to the above lines, declared the listener variable before calling app.listen function. 
-//   Yannick - Changed to reflect that of index.js reference in slack documentation.
-});
+
